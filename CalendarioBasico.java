@@ -27,16 +27,17 @@ public class CalendarioBasico
         mes.setValorAlmacenado(meses);
         anho.setValorAlmacenado(anhos);
     }
-    
+
     public void avanzarFecha() {
         dia.incrementaValorAlmacenado();
         if (dia.getValorAlmacenado() == 1){
             mes.incrementaValorAlmacenado();
-        if (mes.getValorAlmacenado() == 1){
-            anho.incrementaValorAlmacenado();
+            if (mes.getValorAlmacenado() == 1){
+                anho.incrementaValorAlmacenado();
+            }
         }
-    }
-} 
+    } 
+
     public String obtenerFecha() {  
         return dia.getTextoDelDisplay()+ "-" + mes.getTextoDelDisplay() +"-"+anho.getTextoDelDisplay();
     }
